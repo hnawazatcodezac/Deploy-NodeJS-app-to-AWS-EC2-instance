@@ -1,10 +1,17 @@
-# Deploy-NodeJS-app-to-AWS-EC2-instance
+# Deploy Node.js App to AWS EC2 Instance
+
+## 📺 YouTube Tutorial  
+[Watch Tutorial](https://www.youtube.com/watch?v=8savIXlU3wA&t=17s)
+
+---
 
 ## 1. Create the AWS EC2 Instance
 
-- Create an AWS account, if you don’t have one then navigate to the EC2 instances page and click the Launch Instances button.
-- Create the new key pair. Give any name to key pair for example node-app. Download the keypair and save it in your machine.
-- Last step is to launch the instance. 
+- Create an AWS account if you don’t have one.
+- Navigate to the **EC2 Instances** page and click the **Launch Instances** button.
+- Create a new key pair.  
+  Give it a name (e.g., `node-app`) and download the `.pem` key file — save it safely on your machine.
+- Proceed through the remaining steps to launch the instance.
 
 ---
 
@@ -14,31 +21,50 @@
   `ssh -i keypair_name.pem ubuntu@ip-address`
   
 - Update the packages by running the command:
-  `sudo apt-get update`
+  ```bash
+    sudo apt-get update
+  ```
 
 - Install NodeJS by running the command:
-  `sudo apt-get install -y nodejs`
+  ```bash
+    sudo apt-get install -y nodejs
+  ```
 
 - Install Git by running the command:
-  `sudo apt-get install git`
-  
+  ```bash
+    sudo apt-get install git
+  ```
+
 - Clone the github repo:
-  `git clone [repo-link]`
+  ```bash
+    git clone [repo-link]
+  ```
 
 - Navigate to directory:
-  For example: cd node-app or cd test
+  For example:
+    ```bash
+      cd node-app or cd test
+    ```
   
 - Install dependencies:
-  `npm install`
+  ```bash
+    npm install
+  ```
 
 - Run the app:
-  `npm start index.js`
+  ```bash
+    npm start index.js
+  ```
   
 - App is running now. Install pm2 for running the app forever in the background by running the command:
-  `sudo npm install pm2 -g`
+  ```bash
+    sudo npm install pm2 -g
+  ```
 
 - Run the app:
-  `sudo pm2 start index.js`
+  ```bash
+    sudo pm2 start index.js
+  ```
   
 - Stop the app:
   `sudo pm2 stop index.js`
