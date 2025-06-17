@@ -67,4 +67,6 @@
   ```
   
 - Stop the app:
-  `sudo pm2 stop index.js`
+  ```bash
+    sudo pm2 stop index.js
+  ```
